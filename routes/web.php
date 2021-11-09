@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+//use App\Http\Controllers\GenderController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+    //return "<h1>TEST</h1>";
 });
+
+//Route::get('/genders', [GenderController::class, 'index']);
