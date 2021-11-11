@@ -25,7 +25,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/logout', [UserController::class, 'logout']);
+
     Route::get('/genders', [GenderController::class, 'index']);
+    Route::post('/genders/add', [GenderController::class, 'store']);
+    Route::put('/genders/update/{id}', [GenderController::class, 'update']);
+    Route::delete('/genders/delete/{id}', [GenderController::class, 'destroy']);
 });
 
 Route::post('/login', [UserController::class, 'login']);
